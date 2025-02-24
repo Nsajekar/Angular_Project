@@ -1,0 +1,19 @@
+<div class="login-container">
+    <div class="login-box">
+      <h1 style="color: blueviolet;">Website</h1>
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput [(ngModel)]="credentials.username">
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="credentials.password">
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="login()">Login</button>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <a routerLink="/forgot-password">Forgot password?</a>
+      <p>Don't have an account? <a routerLink="/register">Register</a></p>
+    </div>
+  </div>
