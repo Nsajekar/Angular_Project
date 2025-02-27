@@ -3,11 +3,11 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #8E2DE2, #4A00E0); /* Example gradient */
+    background: url('/background.jpg') center/cover no-repeat;
   }
   
   .login-box {
-    background-color: white;
+    background-color: whitesmoke;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -18,13 +18,14 @@
     text-align: center;
     margin-bottom: 20px;
   }
-  
-  .mat-form-field {
-    width: 100%;
-    margin-bottom: 15px;
-  }
+
   
   .error-message {
     color: red;
+    margin-bottom: 10px;
+  }
+
+  .success-message {
+    color: chartreuse;
     margin-bottom: 10px;
   }

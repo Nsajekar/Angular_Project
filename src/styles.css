@@ -2,3 +2,41 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Change the background of mat-form-field */
+.mat-form-field {
+  background-color: #f5f5f5; /* Light gray background */
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Customize input text color */
+.mat-input-element {
+  color: #333 !important; /* Dark gray text */
+  font-size: 16px;
+}
+
+/* Customize the label color */
+.mat-form-field-label {
+  color: #007bff !important; /* Blue label */
+  font-weight: bold;
+}
+
+/* Change the underline color */
+.mat-form-field-underline {
+  background-color: #007bff !important; /* Blue underline */
+}
+
+/* Style for outlined form field */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-color: #007bff !important; /* Blue outline */
+}
+
+/* Customize error message */
+.mat-error {
+  color: red !important;
+  font-weight: bold;
+}
+
+
+

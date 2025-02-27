@@ -1,1 +1,27 @@
-<p>register works!</p>
+<div class="register-container">
+    <div class="register-box">
+        <h1 style="color: blueviolet;">Register</h1>
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+        <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput name="username" [(ngModel)]="credentials.username" #nameRef="ngModel" required="true">
+            <mat-icon matSuffix><i class="bi bi-person"></i></mat-icon>
+            <mat-error *ngIf="nameRef.invalid && nameRef.touched">Name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput name="password" type="password" [(ngModel)]="credentials.password" #passRef="ngModel"
+                required="true">
+            <mat-icon matSuffix><i class="bi bi-shield-lock"></i></mat-icon>
+            <mat-error *ngIf="passRef.invalid && passRef.touched">Password Is required!</mat-error>
+        </mat-form-field>
+        <table>
+            <tr>
+                <td><button mat-raised-button color="primary" (click)="register()">Register</button></td>
+                <td [width]="50"></td>
+                <td><button mat-raised-button color="primary" (click)="login()">Login</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
