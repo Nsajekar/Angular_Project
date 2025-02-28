@@ -33,7 +33,7 @@ export class LoginComponent {
     console.log("Inside Login Component Login() method");
     this.authService.login(this.credentials).subscribe(
       (response) =>{
-        console.log('Login successful:', response);
+        console.log(response);
         this.successMessage = 'Login Successfull'
         this.errorMessage = '';
         this.router.navigate(['/dashboard']);
@@ -41,7 +41,7 @@ export class LoginComponent {
       (error) => {
         console.error('Login failed:', error);
         this.successMessage = ''
-        this.errorMessage = 'Invalid username or password.';
+        this.errorMessage = error.message;
       }
     )
   }
